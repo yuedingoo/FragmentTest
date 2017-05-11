@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yueding.fragmenttest.MainActivity">
+
+    <TextView
+        android:id="@+id/txt_topbar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:text="@string/message"
+        android:background="@color/bg_topbar"
+        android:textColor="@color/text_topbar"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <View
+        android:id="@+id/div_top_bar"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/div_white"
+        app:layout_constraintTop_toBottomOf="@+id/txt_topbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_top_bar"
+        app:layout_constraintBottom_toTopOf="@+id/ly_tab_bar"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/div_top_bar"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/div_top_bar">
+
+    </FrameLayout>
+    
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/div_white"
+        app:layout_constraintBottom_toTopOf="@+id/ly_tab_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/ly_content"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/ly_content" />
+
+    <LinearLayout
+        android:id="@+id/ly_tab_bar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/div_tab_bar"
+        app:layout_constraintRight_toRightOf="@+id/div_tab_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1">
+
+        <TextView
+            android:id="@+id/txt_channel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_menu_channel"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_alert"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="492dp" />
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_menu_message"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_profile"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="108dp"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <TextView
+            android:id="@+id/txt_better"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_menu_better"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_my"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="492dp" />
+
+        <TextView
+            android:id="@+id/txt_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_menu_setting"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tab_menu_setting"
+            android:textColor="@drawable/tab_menu_text"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="308dp"
+            tools:layout_editor_absoluteY="492dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
